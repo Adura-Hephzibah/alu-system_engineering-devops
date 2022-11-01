@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+p {
+  margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/003/475/012/original/confused-man-with-question-mark-concept-flat-illustration-free-vector.jpg);
+}
+
+.overlay {
+    background-color: rgb(249, 120, 5, 0.5 );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .header {
+    font-size: 20rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.overlay p {
+    font-size: 5rem;
+    color: #fff;
+}

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# configure server with nginx and add header
+
+sudo apt update
+sudo apt install nginx -y
+sudo touch /var/www/html/index.html
+
+echo "Holberton School" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    
+    root /var/www/html;
+    
+    index index.html;
+    error_page 404 /404.html;
+    
+    server_name _;
+    
+    add_header X-Served-By $hostname;
+    
+    location /redirect_me {
+        return 301 https://www.google.com;
+    }
+}
+" | sudo tee /etc/nginx/sites-available/default_server
+
+sudo service nginx restart

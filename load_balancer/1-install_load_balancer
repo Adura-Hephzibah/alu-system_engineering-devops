@@ -11,7 +11,7 @@ backend web-backend
 	server 4811-web-01 54.172.211.21 check
 	server 4811-web-02 3.80.123.237 check
 
-frontend main
+frontend http
 	bind *:80
 	mode http
 	default_backend web-backend

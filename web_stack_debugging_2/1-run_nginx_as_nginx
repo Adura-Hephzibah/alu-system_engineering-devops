@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# explain 
+
+sudo sed -i 's/user www-data/user nginx/' /etc/nginx/nginx.conf
+chmod 700 /etc/nginx/nginx.conf
+
+sudo sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
+# resource - https://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux
+kill "$(lsof -t -i:8080)"
+sudo -u nginx service nginx restart

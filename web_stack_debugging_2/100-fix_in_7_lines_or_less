@@ -2,5 +2,5 @@
 # same as task 1
 lsof -t -i:8080 | xargs -r kill
 chmod 777 /etc/nginx/nginx.conf
-sudo sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
 sudo -u nginx service nginx restart

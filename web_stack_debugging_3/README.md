@@ -10,4 +10,6 @@
 * fix error
 
 ### Resource
+> [to see error](https://stackoverflow.com/questions/4731364/internal-error-500-apache-but-nothing-in-the-logs)
+
 > for puppet code [Resource Type Reference](https://puppet.com/docs/puppet/5.5/type.html)

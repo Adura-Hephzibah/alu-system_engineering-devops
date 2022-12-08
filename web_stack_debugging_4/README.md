@@ -3,8 +3,11 @@
 
 ## Approach for task 0
 > In sandbox run this command - ```ab -c 100 -n 2000 localhost/```
+
 > Check error log with this command - ``` cat /var/log/nginx/error.log```
+
 > You see too many file open error
+
 > Increase limit in /etc/default/nginx
 
 ## Helpful links

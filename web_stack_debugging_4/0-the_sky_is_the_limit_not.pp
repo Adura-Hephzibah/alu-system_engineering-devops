@@ -9,5 +9,5 @@ exec {'increase_limit':
 # Restart Nginx 
 exec { 'restart_service':
   command  => 'sudo service nginx restart',
-  provider => 'shell'
+  provider => shell
 }
